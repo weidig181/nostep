@@ -1,7 +1,7 @@
-hack.call = function() { 
-	this.callId;
-	this.callTime;
-	this.startfloor;
-	this.endfloor;
+hack.call = function(oCall) { 
+	this.callId = oCall.callId;
+	this.callTime = oCall.callTime;
+	this.startfloor = oCall.startfloor;
+	this.endfloor = oCall.endfloor;
 	this.stop;
 }
