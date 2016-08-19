@@ -1,6 +1,11 @@
 var oChallenge = new hack.challenge();
 
 hack.challenge = function(jsonString)  {
+	this.getStops = function() {
+		var aStops = { challengeId: this.challengeId };
+		aStops.stops = this.Stops;
+		return JSON.stringify(aStops);
+	}
 	var theChallenge = JSON.parse(jsonString);
     this._id; 
     this.challengeId = theChallenge.challengeID;
