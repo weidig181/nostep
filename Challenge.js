@@ -4,7 +4,27 @@ hack.challenge = function(jsonString)  {
 	this.getStops = function() {
 		var aStops = { challengeId: this.challengeId };
 		aStops.stops = this.Stops;
-		return JSON.stringify(aStops);
+
+		var testObject = {
+			"challengeId": 1,
+			"stops": [
+				{
+					"stopId": 1,
+					"elevatorId": 1,
+					"floor": 1,
+					"pickup": [1],
+					"dropoff": []
+				},
+				{
+					"stopId": 64,
+					"elevatorId": 1,
+					"floor": 5,
+					"pickup": [],
+					"dropoff": [34]
+				}
+			]
+		};
+		return JSON.stringify(testObject);
 	}
 	var theChallenge = JSON.parse(jsonString);
     this._id; 
